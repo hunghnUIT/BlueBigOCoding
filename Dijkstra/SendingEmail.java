@@ -48,12 +48,12 @@ public class SendingEmail {
       if (distance > dist[id])
         continue;
 
-        for (Node node : graph.get(id)) {
-          if (node.dist + distance < dist[node.id]) {
-            dist[node.id] = node.dist + distance;
-            pq.add(new Node(node.id, dist[node.id]));
-          }
+      for (Node node : graph.get(id)) {
+        if (node.dist + distance < dist[node.id]) {
+          dist[node.id] = node.dist + distance;
+          pq.add(new Node(node.id, dist[node.id]));
         }
+      }
     }
   }
 }
